@@ -38,9 +38,16 @@ class RecipesController < ApplicationController
         end
     end
     
+    def like
+        @recipe = Recipe.find(params[:id])
+        Like.create(likes: params[:likes], chef: Chef.first, recipe: @recipe)
+        flash[:success] = 'Your selection was successful'
+        redirect_to :back 
+    end
+    
     private
         def recipe_params
-           params.require(:recipe).permit(:name, :summary, :description) 
+           params.require(:recipe).permit(:name, :summary, :description, :picture) 
         end
     
 end
