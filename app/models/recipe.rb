@@ -10,6 +10,8 @@ class Recipe < ActiveRecord::Base
     
     validate :picture_size
     
+    default_scope -> { order(updated_at: :desc) }
+    
     def thumbs_up_total
         self.likes.where(likes: true).size
     end
