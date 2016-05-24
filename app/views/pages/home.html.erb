@@ -1,10 +1,17 @@
 <div class='jumbotron text-center'>
     <h1>Welcome to my Recipes App</h1>
     <h2>This is the home page for the Professional Ruby on Rails developer Course</h2>
-    <%= link_to "Sign Up Now", '', class: 'btn btn-lg btn-success' %>
+    <%= link_to "Sign Up Now", register_path, class: 'btn btn-lg btn-success' %>
 </div>
 
 <div class='row'>
+    <div class='col-lg-4'>
+        <h3 class='midrow'>
+            Sign in to your account
+        </h3>
+        <h2 class='left'>Add/update your recipes, create review, recipes, like/dislike and much more ...</h2>
+        <p><%= link_to "Log in to your account", login_path, class: 'btn btn-small btn-warning' %></p>
+    </div>
     <div class='col-lg-4'>
         <h3 class='midrow'>
             View recipes as guest user
@@ -17,14 +24,7 @@
             View recipes as guest user
         </h3>
         <h2 class='left'>Browse and View recipes as a guest and sign up later</h2>
-        <p><%= link_to "Browse Recipes Listing", '', class: 'btn btn-small btn-warning' %></p>
-    </div>
-    <div class='col-lg-4'>
-        <h3 class='midrow'>
-            View recipes as guest user
-        </h3>
-        <h2 class='left'>Browse and View recipes as a guest and sign up later</h2>
-        <p><%= link_to "Browse Recipes Listing", '', class: 'btn btn-small btn-warning' %></p>
+        <p><%= link_to "Browse Recipes Listing", recipes_path, class: 'btn btn-small btn-warning' %></p>
     </div>
 </div>
 
